@@ -1,0 +1,2 @@
+-lib openfl
+-cmd haxelib run openfl setup

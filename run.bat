@@ -65,6 +65,9 @@ echo Installing libraries from %selected_file%...
 REM Function to install libraries from an .hxml file
 call :install_libraries "%selected_file%"
 
+REM Execute the .hxml file
+haxe "%selected_file%"
+
 pause
 exit /b 0
 

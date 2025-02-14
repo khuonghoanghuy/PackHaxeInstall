@@ -1,6 +1,6 @@
---library flixel
---library openfl
---library lime
+-lib flixel
+-lib openfl
+-lib lime
 
 -cmd haxelib run lime setup flixel
 
