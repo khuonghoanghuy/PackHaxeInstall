@@ -1,0 +1,2 @@
+-lib lime
+-cmd haxelib run lime setup

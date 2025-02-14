@@ -81,10 +81,15 @@ REM Function to install libraries from an .hxml file
         REM Check if the line starts with "-lib"
         echo %%l | findstr /r /c:"^-lib" >nul
         if not errorlevel 1 (
-            REM Extract the library name
-            for /f "tokens=2" %%a in ("%%l") do (
-                echo Installing library: %%a
-                haxelib install %%a
+            REM Extract the library name and version if specified
+            for /f "tokens=2,3" %%a in ("%%l") do (
+                if "%%b"=="" (
+                    echo Installing library: %%a
+                    haxelib install %%a
+                ) else (
+                    echo Installing library: %%a version: %%b
+                    haxelib install %%a %%b
+                )
             )
         )
     )
