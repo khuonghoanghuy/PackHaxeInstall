@@ -1,0 +1,10 @@
+--library flixel
+--library openfl
+--library lime
+
+-cmd haxelib run lime setup flixel
+
+-cmd haxelib run lime setup
+
+-cmd haxelib install flixel-tools
+-cmd haxelib run flixel-tools setup
